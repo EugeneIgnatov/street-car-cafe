@@ -1,9 +1,14 @@
 import React from 'react';
 
+import './HomePage.scss';
+import pic from '../images/banner-slide-home.png';
+
 function HomePage(props) {
 	return (
-		<div>
-			<h1>Home</h1>
+		<div className='home_cover'>
+			<div className='home_image-box'>
+				<img src={pic} alt='logo'></img>
+			</div>
 		</div>
 	);
 }

@@ -1,32 +1,30 @@
 @import '../../../base';
 
-// .nav {
-// 	padding: 0 2rem;
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	background-color: $color-secondary;
-// 	text-transform: uppercase;
-// }
+.nav {
+	padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-black;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0;
+	width: 100%;
 
-// .nav_logo-box {
-// 	margin: 0.5rem 0 0.3rem 0;
-// 	img {
-// 		height: 7rem;
-// 		border-radius: 50%;
-// 	}
-// }
+	&_links {
+		display: flex;
+		padding: 0.5rem 0.2rem;
+		a {
+			text-decoration: none;
+			color: $color-white;
+			padding: 3rem 2rem;
+			&:hover {
+				color: rgba($color-golden, 0.7);
+			}
+		}
+	}
 
-// .nav_links {
-// 	display: flex;
-// 	padding: 0.5rem 0.2rem;
-// 	a {
-// 		text-decoration: none;
-// 		color: $color-primary;
-// 		padding: 3rem 2rem;
-// 	}
-// }
-// .nav_links-active {
-// 	font-weight: bold;
-// 	color: red;
-// }
+	&_links-active {
+		color: $color-golden !important;
+	}
+}

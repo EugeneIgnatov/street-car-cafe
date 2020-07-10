@@ -9,7 +9,9 @@ import './Navbar.scss';
 function Navbar(props) {
 	return (
 		<nav className='nav'>
-			<Brand logo={logo} />
+			<NavLink to='/' exact>
+				<Brand logo={logo} />
+			</NavLink>
 			<div className='nav_links'>
 				<div>
 					<NavLink to='/' activeClassName='nav_links-active' exact>

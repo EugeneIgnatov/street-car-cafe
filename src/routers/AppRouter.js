@@ -28,7 +28,7 @@ function AppRouter(props) {
 						<NotFoundPage />
 					</Route>
 				</Switch>
-				<Footer />
+				<Footer height={4} />
 			</Router>
 		</div>
 	);
