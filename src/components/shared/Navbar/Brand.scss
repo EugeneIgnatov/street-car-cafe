@@ -1,9 +1,16 @@
 @import '../../../base';
 
 .nav_logo-box {
-	margin: 0.5rem 0 0.3rem 0;
-	img {
-		height: 7rem;
-		border-radius: 50%;
-	}
+  margin: 0.5rem 0 0.3rem 0;
+  // height: 2rem;
+  img {
+    height: 7rem;
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav_logo-box img {
+    height: 5rem;
+  }
 }

@@ -1,0 +1,13 @@
+@import '../../../base';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40vw;
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
