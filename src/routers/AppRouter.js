@@ -10,28 +10,30 @@ import Footer from '../components/shared/Footer';
 import '../App.scss';
 
 function AppRouter(props) {
-	return (
-		<div>
-			<Router>
-				<Navbar />
-				<Switch>
-					<Route path='/' exact>
-						<HomePage />
-					</Route>
-					<Route path='/menu'>
-						<MenuPage />
-					</Route>
-					<Route path='/contact'>
-						<ContactPage />
-					</Route>
-					<Route>
-						<NotFoundPage />
-					</Route>
-				</Switch>
-				<Footer height={4} />
-			</Router>
-		</div>
-	);
+  return (
+    <div>
+      <Router>
+        <Navbar />
+        <main style={{ marginTop: '7rem' }}>
+          <Switch>
+            <Route path='/' exact>
+              <HomePage />
+            </Route>
+            <Route path='/menu'>
+              <MenuPage />
+            </Route>
+            <Route path='/contact'>
+              <ContactPage />
+            </Route>
+            <Route>
+              <NotFoundPage />
+            </Route>
+          </Switch>
+          <Footer height={4} />
+        </main>
+      </Router>
+    </div>
+  );
 }
 
 export default AppRouter;

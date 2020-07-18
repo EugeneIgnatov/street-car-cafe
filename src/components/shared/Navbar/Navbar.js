@@ -13,7 +13,7 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
   return isDesktop ? children : null;
 };
 
@@ -46,10 +46,5 @@ function Navbar(props) {
     </nav>
   );
 }
-// <FontAwesomeIcon
-// icon={faBars}
-// size='lg'
-// color={'white'}
-// open={open}
-// />
+
 export default Navbar;
