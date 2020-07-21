@@ -4,7 +4,7 @@ import useWindowSize from '../../../hooks/useWindowSize';
 
 import './NavLinks.scss';
 
-const NavLinks = ({ open, setOpen }) => {
+const NavLinks = ({ setOpen }) => {
   const size = useWindowSize();
   const handleCloseSideBar = () => {
     setOpen(false);

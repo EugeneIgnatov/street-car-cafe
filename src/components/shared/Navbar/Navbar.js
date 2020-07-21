@@ -6,6 +6,8 @@ import Brand from './Brand';
 import SideBar from './SideBar';
 import logo from '../../../images/Streetcar-logo.jpg';
 import NavLinks from './NavLinks';
+import Hamburger from '../UI/Hamburger';
+import Modal from '../UI/Modal';
 import './Navbar.scss';
 
 const Mobile = ({ children }) => {
@@ -28,19 +30,8 @@ function Navbar(props) {
         <NavLinks open={open} setOpen={setOpen} />
       </Desktop>
       <Mobile>
-        <button
-          onClick={() => {
-            setOpen(!open);
-          }}
-          className={`nav__hamburger--button ${
-            open ? 'nav__hamburger--change nav__hamburger--button' : ''
-          }`}
-        >
-          <div className={'nav__hamburger--bar1'}></div>
-          <div className='nav__hamburger--bar2'></div>
-          <div className='nav__hamburger--bar3'></div>
-        </button>
-
+        {open && <Modal open={open} setOpen={setOpen} />}
+        <Hamburger open={open} setOpen={setOpen} />
         {open && <SideBar open={open} setOpen={setOpen} />}
       </Mobile>
     </nav>
