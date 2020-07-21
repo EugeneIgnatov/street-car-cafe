@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import NavLinks from './NavLinks';
 import './SideBar.scss';
 
-// const variants = {
-//   open: { x: '100' },
-//   closed: { x: '+100%' },
-// };
+//framermotion library
+const sideBarVariants = {
+  open: { x: 0, transition: { type: 'tween' } },
+  closed: { x: '100vw' },
+};
 
 const SideBar = ({ open, setOpen }) => {
   useEffect(() => {
@@ -17,7 +18,13 @@ const SideBar = ({ open, setOpen }) => {
     };
   }, [open, setOpen]);
   return (
-    <motion.div className='sidebar'>
+    <motion.div
+      className='sidebar'
+      variants={sideBarVariants}
+      initial='closed'
+      exit='closed'
+      animate='open'
+    >
       <NavLinks open={open} setOpen={setOpen} />
     </motion.div>
   );

@@ -14,7 +14,7 @@ function AppRouter(props) {
     <div>
       <Router>
         <Navbar />
-        <main style={{ marginTop: '7rem' }}>
+        <main style={{ marginTop: '8rem' }}>
           <Switch>
             <Route path='/' exact>
               <HomePage />

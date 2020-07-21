@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Brand from './Brand';
 import SideBar from './SideBar';
@@ -32,7 +33,9 @@ function Navbar(props) {
       <Mobile>
         {open && <Modal open={open} setOpen={setOpen} />}
         <Hamburger open={open} setOpen={setOpen} />
-        {open && <SideBar open={open} setOpen={setOpen} />}
+        <AnimatePresence>
+          {open && <SideBar open={open} setOpen={setOpen} />}
+        </AnimatePresence>
       </Mobile>
     </nav>
   );
