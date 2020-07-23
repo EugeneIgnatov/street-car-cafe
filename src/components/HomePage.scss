@@ -1,14 +1,17 @@
 @import '../base.scss';
 .home {
   &_cover {
-    background: url('../images/background-home.jpg') no-repeat center fixed;
+    background-image: url('../images/background-home.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     height: 90vh;
   }
   &_image-box {
     display: flex;
-
+    background: transparent;
     align-items: center;
     width: 20rem;
 

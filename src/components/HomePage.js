@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './HomePage.scss';
 
-import pic from '../images/banner-slide-home.png';
+import brandphrase from '../images/banner-slide-home.png';
 import trolley from '../images/street-restaurant-door002.jpg';
 import fooditems from '../images/fooditems';
 
@@ -26,7 +26,7 @@ function HomePage(props) {
           animate='visible'
           variants={variants}
         >
-          <img src={pic} alt='logo'></img>
+          <img src={brandphrase} alt='logo'></img>
         </motion.div>
       </div>
       <SectionHeading
