@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/street-car-cafe/static/css/main.89d6cc0f.chunk.css",
+    "main.js": "/street-car-cafe/static/js/main.7b5cae36.chunk.js",
+    "main.js.map": "/street-car-cafe/static/js/main.7b5cae36.chunk.js.map",
+    "runtime-main.js": "/street-car-cafe/static/js/runtime-main.b5d92fc9.js",
+    "runtime-main.js.map": "/street-car-cafe/static/js/runtime-main.b5d92fc9.js.map",
+    "static/js/2.e5d0c77d.chunk.js": "/street-car-cafe/static/js/2.e5d0c77d.chunk.js",
+    "static/js/2.e5d0c77d.chunk.js.map": "/street-car-cafe/static/js/2.e5d0c77d.chunk.js.map",
+    "index.html": "/street-car-cafe/index.html",
+    "precache-manifest.aa60e61b7dcc897695f5cd7805f57a67.js": "/street-car-cafe/precache-manifest.aa60e61b7dcc897695f5cd7805f57a67.js",
+    "service-worker.js": "/street-car-cafe/service-worker.js",
+    "static/css/main.89d6cc0f.chunk.css.map": "/street-car-cafe/static/css/main.89d6cc0f.chunk.css.map",
+    "static/js/2.e5d0c77d.chunk.js.LICENSE.txt": "/street-car-cafe/static/js/2.e5d0c77d.chunk.js.LICENSE.txt",
+    "static/media/HomePage.scss": "/street-car-cafe/static/media/background-home.492b6727.jpg",
+    "static/media/banner-slide-home.png": "/street-car-cafe/static/media/banner-slide-home.0dee2229.png",
+    "static/media/fooditem1.jpg": "/street-car-cafe/static/media/fooditem1.c7f51e2b.jpg",
+    "static/media/fooditem2.jpg": "/street-car-cafe/static/media/fooditem2.87947844.jpg",
+    "static/media/fooditem3.jpg": "/street-car-cafe/static/media/fooditem3.e8832692.jpg",
+    "static/media/fooditem4.jpg": "/street-car-cafe/static/media/fooditem4.3eabb358.jpg",
+    "static/media/fooditem5.jpg": "/street-car-cafe/static/media/fooditem5.58b439ac.jpg",
+    "static/media/fooditem6.jpg": "/street-car-cafe/static/media/fooditem6.f9639775.jpg",
+    "static/media/street-restaurant-door002.jpg": "/street-car-cafe/static/media/street-restaurant-door002.14937ec2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5d92fc9.js",
+    "static/js/2.e5d0c77d.chunk.js",
+    "static/css/main.89d6cc0f.chunk.css",
+    "static/js/main.7b5cae36.chunk.js"
+  ]
+}
