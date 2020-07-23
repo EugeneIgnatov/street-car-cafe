@@ -17,7 +17,7 @@
     }
   }
 
-  // ABOUT section
+  // ABOUT section///////////////////
   &_about {
     margin: 2rem 4rem 0;
     display: grid;
@@ -29,31 +29,6 @@
       grid-template-columns: 1fr;
       margin: 1rem 2rem 0;
     }
-
-    &-name {
-      color: $color-black;
-      font-size: 4rem;
-      font-weight: bold;
-
-      @include respond(phone) {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
-      }
-
-      & span {
-        @include respond(phone) {
-          align-self: center;
-        }
-      }
-    }
-
-    // &-break-line {
-    //   background-color: $color-red;
-    //   height: 0.3rem;
-    //   width: 15%;
-    //   margin-top: 1rem;
-    // }
 
     &-name-container {
       grid-column: 1/3;
@@ -81,26 +56,34 @@
       flex-direction: column;
       justify-content: center;
       padding: 2rem;
-
-      & button {
-        background-color: $color-red;
-        padding: 1rem;
-        font-size: 1.5rem;
-        border: none;
-        align-self: start;
-        text-transform: uppercase;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        outline: none;
-        margin-top: 2rem;
-
-        & a {
-          color: $color-white;
-          text-decoration: none;
-        }
-      }
     }
   }
 
-  //
+  //Image Gallery////////////////////////////
+
+  &_image-gallery {
+    display: grid;
+    margin: 2rem;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
+
+    @include respond(tab-land) {
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    @include respond(phone) {
+      grid-template: 1fr 1fr / 1fr;
+    }
+  }
+  &_image-item {
+    width: 100%;
+    height: 30rem;
+    box-shadow: 3px 3px 10px $color-black;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }

@@ -1,24 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
 import { AnimatePresence } from 'framer-motion';
 
 import Brand from './Brand';
 import SideBar from './SideBar';
 import logo from '../../../images/Streetcar-logo.jpg';
 import NavLinks from './NavLinks';
-import Hamburger from '../UI/Hamburger';
+import Hamburger from './Hamburger';
+import Mobile from '../Layout/Mobile';
+import Desktop from '../Layout/Desktop';
 import Modal from '../UI/Modal';
 import './Navbar.scss';
-
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  return isMobile ? children : null;
-};
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-  return isDesktop ? children : null;
-};
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);

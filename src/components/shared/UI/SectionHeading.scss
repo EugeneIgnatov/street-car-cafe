@@ -1,4 +1,4 @@
-@import '../../base';
+@import '../../../base';
 
 .section_heading {
   display: grid;
@@ -24,8 +24,5 @@
       align-items: center;
       margin-bottom: 1rem;
     }
-  }
-
-  &-subheader {
   }
 }

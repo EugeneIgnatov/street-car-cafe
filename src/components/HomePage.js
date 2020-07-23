@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import './HomePage.scss';
+
 import pic from '../images/banner-slide-home.png';
 import trolley from '../images/street-restaurant-door002.jpg';
+import fooditems from '../images/fooditems';
 
-import SectionHeading from '../components/shared/SectionHeading';
+import SectionHeading from '../components/shared/UI/SectionHeading';
+import Button from './shared/UI/Button';
+import Mobile from './shared/Layout/Mobile';
+import Desktop from './shared/Layout/Desktop';
 
 const variants = {
   hidden: { opacity: 0 },
@@ -43,18 +47,32 @@ function HomePage(props) {
             ourselves on amazing service, and fresh ingredients. Come visit us
             for a healthy breakfast or a late night cocktail!
           </p>
-
-          <button>
-            <Link to='/menu'>See our menu</Link>
-          </button>
+          <Desktop>
+            <Button link='/menu' posit='flex-start'>
+              Full menu
+            </Button>
+          </Desktop>
+          <Mobile>
+            <Button link='/menu' posit='center'>
+              Full menu
+            </Button>
+          </Mobile>
         </div>
       </div>
       <SectionHeading
-        headerFirstWord='New'
-        headerSecondWord='Orleans'
-        subHeader='The great History'
+        headerFirstWord='Fantastic'
+        headerSecondWord='Food'
+        subHeader='Some of our items'
       />
-      <div className='home_image-gallery'></div>
+      <div className='home_image-gallery'>
+        {fooditems.map((item, indx) => {
+          return (
+            <div className='home_image-item' key={indx}>
+              <img src={item} alt='foodpic'></img>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

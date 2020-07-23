@@ -1,0 +1,23 @@
+@import '../../../base.scss';
+
+.button {
+  background-color: $color-red;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: none;
+  align-self: flex-end;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  outline: none;
+  margin-top: 2rem;
+
+  & a {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  & .button:hover {
+    background-color: rgba(#000, 0.8);
+  }
+}

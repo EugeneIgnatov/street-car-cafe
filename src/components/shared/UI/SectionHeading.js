@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './SectionHeader.scss';
+import './SectionHeading.scss';
 
 const SectionHeading = ({ headerFirstWord, headerSecondWord, subHeader }) => {
   return (
