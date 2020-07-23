@@ -1,26 +1,36 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './HomePage.scss';
 import pic from '../images/banner-slide-home.png';
 import trolley from '../images/street-restaurant-door002.jpg';
+
+import SectionHeading from '../components/shared/SectionHeading';
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
 function HomePage(props) {
   return (
     <div>
       <div className='home_cover'>
-        <div className='home_image-box'>
+        <motion.div
+          className='home_image-box'
+          initial='hidden'
+          animate='visible'
+          variants={variants}
+        >
           <img src={pic} alt='logo'></img>
-        </div>
+        </motion.div>
       </div>
+      <SectionHeading
+        headerFirstWord='Streetcar'
+        headerSecondWord='Cafe'
+        subHeader='Coffe & Beignet'
+      />{' '}
       <div className='home_about'>
-        <div className='home_about-name-container'>
-          <h1 className='home_about-name'>
-            Streetcar <span>cafe</span>
-          </h1>
-          <h3>Coffee & Beignet</h3>
-          <span className='home_about-break-line'></span>
-        </div>
-
         <div className='home_about-image'>
           <img src={trolley} alt='trolley'></img>
         </div>
@@ -34,9 +44,17 @@ function HomePage(props) {
             for a healthy breakfast or a late night cocktail!
           </p>
 
-          <button>See our menu</button>
+          <button>
+            <Link to='/menu'>See our menu</Link>
+          </button>
         </div>
       </div>
+      <SectionHeading
+        headerFirstWord='New'
+        headerSecondWord='Orleans'
+        subHeader='The great History'
+      />
+      <div className='home_image-gallery'></div>
     </div>
   );
 }
