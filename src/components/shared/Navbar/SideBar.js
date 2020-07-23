@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import NavLinks from './NavLinks';
 import './SideBar.scss';
@@ -8,7 +8,7 @@ import './SideBar.scss';
 //framermotion library
 const sideBarVariants = {
   open: { x: 0, transition: { type: 'tween' } },
-  closed: { x: '100vw' },
+  closed: { x: '100vw', transition: { duration: 1 } },
 };
 
 const SideBar = ({ open, setOpen }) => {
