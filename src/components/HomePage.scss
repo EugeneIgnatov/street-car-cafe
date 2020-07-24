@@ -4,18 +4,21 @@
     background-image: url('../images/background-home.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
+    width: 100vw;
+    opacity: 2;
   }
   &_image-box {
-    display: flex;
-    align-items: center;
-    width: 20rem;
+    display: grid;
+    place-items: center;
+    width: 30rem;
 
     img {
-      width: inherit;
+      width: 100%;
     }
   }
 
