@@ -1,0 +1,51 @@
+@import '../base';
+
+.menu {
+  margin: 0 2rem;
+
+  //header section
+
+  &_sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-weight: bold;
+
+    @include respond(phone) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-line {
+      background-color: $color-red;
+      height: 0.2rem;
+      width: 100%;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    & div {
+      text-transform: uppercase;
+      margin: 1rem 1rem;
+
+      @include respond(phone) {
+        margin: 0.5rem 0.5rem;
+        align-content: center;
+      }
+    }
+  }
+
+  //ITEms style
+
+  &_items-container {
+    // display: grid;
+    // : wrap;
+
+    &-card {
+      height: 20rem;
+      background-color: orange;
+      width: 20rem;
+    }
+  }
+}

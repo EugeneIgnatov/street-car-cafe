@@ -13,7 +13,7 @@
   &-line {
     background-color: $color-red;
     height: 0.3rem;
-    width: 15%;
+    width: 30%;
     margin-top: 1rem;
   }
 
@@ -23,6 +23,12 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 1rem;
+    }
+  }
+
+  &-subheader {
+    @include respond(phone) {
+      text-align: center;
     }
   }
 }

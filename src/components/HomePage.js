@@ -5,6 +5,9 @@ import './HomePage.scss';
 import brandphrase from '../images/banner-slide-home.png';
 import trolley from '../images/street-restaurant-door002.jpg';
 import fooditems from '../images/fooditems';
+import forsq from '../images/forsq.png';
+import opentable from '../images/opentable.png';
+import tripadv from '../images/tripadv.png';
 
 import SectionHeading from '../components/shared/UI/SectionHeading';
 import Button from './shared/UI/Button';
@@ -72,6 +75,16 @@ function HomePage(props) {
             </div>
           );
         })}
+      </div>
+      <SectionHeading
+        headerFirstWord='Trusted'
+        headerSecondWord='By'
+        subHeader='These fine folks trusted our restaurant and delicious foods.'
+      />
+      <div className='home_lables'>
+        <img src={forsq} alt='forsq logo'></img>
+        <img src={opentable} alt='opentable logo'></img>
+        <img src={tripadv} alt='tripaviser logo'></img>
       </div>
     </div>
   );

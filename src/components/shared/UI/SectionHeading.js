@@ -8,7 +8,7 @@ const SectionHeading = ({ headerFirstWord, headerSecondWord, subHeader }) => {
       <h1 className='section_heading-header'>
         {headerFirstWord} <span>{headerSecondWord}</span>
       </h1>
-      <h2 className='section_heading-subheader'>{subHeader}</h2>
+      <h3 className='section_heading-subheader'>{subHeader}</h3>
       <span className='section_heading-line'></span>
     </div>
   );
