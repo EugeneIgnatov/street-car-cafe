@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { menuSections, initialSection } from '../components/menupagedata';
 import './MenuPage.scss';
 import SectionHeading from '../components/shared/UI/SectionHeading';
+import Mobile from '../components/shared/Layout/Mobile';
+import Desktop from '../components/shared/Layout/Desktop';
 
 function MenuPage(props) {
   const [activeSection, setActiveSection] = useState(initialSection);
@@ -12,21 +14,43 @@ function MenuPage(props) {
       <SectionHeading
         headerFirstWord='Our'
         headerSecondWord=' Menu'
-        subHeader='New Orleans foor with cajun twist'
+        subHeader='New Orleans food with cajun twist'
       />
-      <div className='menu_sections'>
-        {menuSections.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => {
-              setActiveSection(item);
+      <Desktop>
+        <div className='menu_sections'>
+          {menuSections.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => {
+                setActiveSection(item);
+              }}
+            >
+              <h3>{item.name}</h3>
+              <span className='menu_sections-line'></span>
+            </div>
+          ))}
+        </div>
+      </Desktop>
+      <Mobile>
+        <div className='menu_sections_mobile'>
+          <select
+            id='menu_sections'
+            name='menu'
+            onChange={(e) => {
+              let active = menuSections.find(
+                (item) => item.name === e.target.value
+              );
+              setActiveSection(active);
             }}
           >
-            <h3>{item.name}</h3>
-            <span className='menu_sections-line'></span>
-          </div>
-        ))}
-      </div>
+            {menuSections.map((item) => (
+              <option key={item.id} value={item.name}>
+                {item.name.toUpperCase()}
+              </option>
+            ))}
+          </select>
+        </div>
+      </Mobile>
 
       <div className='menu_items-container'>
         {activeSection.items.map((item) => (
