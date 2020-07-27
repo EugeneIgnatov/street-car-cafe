@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import ScrollToTop from '../routers/ScrollToTop';
 import HomePage from '../components/HomePage';
 import NotFoundPage from '../components/NotFoundPage';
 import ContactPage from '../components/ContactPage';
@@ -13,6 +14,8 @@ function AppRouter(props) {
   return (
     <div>
       <Router>
+        <ScrollToTop />
+
         <Navbar />
         <main style={{ marginTop: '8rem' }}>
           <Switch>

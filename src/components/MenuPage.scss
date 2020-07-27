@@ -1,7 +1,7 @@
 @import '../base';
 
 .menu {
-  margin: 0 2rem;
+  margin: 0 2rem 2rem;
 
   //header section
 
@@ -27,7 +27,7 @@
     }
     &_mobile {
       // position: relative;
-      width: 50%;
+      width: 60%;
       margin: 2.5rem auto;
       height: 3rem;
       line-height: 3;
@@ -37,10 +37,14 @@
       outline: none;
 
       & select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
         flex: 1;
-        padding: 0 1rem;
+        padding-left: 1rem;
         color: #fff;
         height: 100%;
+        border: none;
 
         background-color: transparent;
         cursor: pointer;
@@ -80,11 +84,9 @@
     @include respond(phone) {
       grid-template-columns: 1fr;
     }
-
-    &-card {
-      & :nth-child(2) {
-        font-weight: bold;
-      }
+    &-descr {
+      color: grey;
+      font-size: smaller;
     }
   }
 }

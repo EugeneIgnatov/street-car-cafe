@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { menuSections, initialSection } from '../components/menupagedata';
 import './MenuPage.scss';
+
 import SectionHeading from '../components/shared/UI/SectionHeading';
 import Mobile from '../components/shared/Layout/Mobile';
 import Desktop from '../components/shared/Layout/Desktop';
@@ -49,15 +52,16 @@ function MenuPage(props) {
               </option>
             ))}
           </select>
+          <FontAwesomeIcon icon='caret-down' color='white' pull='left' />
         </div>
       </Mobile>
 
       <div className='menu_items-container'>
         {activeSection.items.map((item) => (
-          <div key={item.name} className='menu_items-container-card'>
+          <div key={item.name}>
             <h3>{item.name}</h3>
             <p>{item.price}</p>
-            <p>{item.descreption}</p>
+            <p className='menu_items-container-descr'>{item.descreption}</p>
           </div>
         ))}
       </div>
