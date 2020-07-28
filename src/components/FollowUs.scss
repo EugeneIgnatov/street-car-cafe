@@ -1,0 +1,18 @@
+@import '../base.scss';
+
+.brand_icons-container {
+  display: flex;
+}
+
+.brand_icons {
+  background-color: $color-black;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 1rem;
+}
+.brand_icons:hover {
+  background-color: $color-red;
+}

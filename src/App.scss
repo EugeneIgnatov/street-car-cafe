@@ -3,28 +3,32 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 html {
-	font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
+  font-size: 62.5%; //1rem = 10px 10px/16px = 62.5%
 
-	@include respond(tab-land) {
-		// width < 1200px
-		font-size: 56.25%;
-	}
-	@include respond(tab-port) {
-		// width < 1200px
-		font-size: 50%;
-	}
-	@include respond(big-desktop) {
-		// width < 1200px
-		font-size: 75%;
-	}
+  @include respond(tab-land) {
+    // width < 1200px
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    // width < 1200px
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    // width < 1200px
+    font-size: 75%;
+  }
+  @include respond(giant-desktop) {
+    // width < 1200px
+    font-size: 100%;
+  }
 }
 body {
-	box-sizing: border-box;
-	font-size: 1.6rem;
-	font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
 }

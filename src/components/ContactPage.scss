@@ -26,16 +26,4 @@
     color: $color-red;
     padding-right: 2px;
   }
-
-  &-brand-icons {
-    background-color: $color-black;
-    width: 5rem;
-    height: 5rem;
-    padding: 1rem;
-    border-radius: 50%;
-    text-align: center;
-  }
-  &-brand-icons:hover {
-    background-color: $color-red;
-  }
 }

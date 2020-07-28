@@ -6,6 +6,7 @@ import SectionHeading from '../components/shared/UI/SectionHeading';
 import Contactform from './ContactForm';
 import Mobile from '../components/shared/Layout/Mobile';
 import Phone from '../components/shared/UI/Phone';
+import FollowUs from '../components/FollowUs';
 
 function ContactPage({ register, handleSubmit, errors }) {
   return (
@@ -61,21 +62,7 @@ function ContactPage({ register, handleSubmit, errors }) {
             11:00 am to 11:30 pm on Weekends
           </p>
           <h3>Follow us</h3>
-          <div className='contact_address-brand-icons'>
-            <a
-              href='https://www.instagram.com/streetcarcafenola/?hl=en'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {' '}
-              <FontAwesomeIcon
-                icon={['fab', 'instagram']}
-                size='2x'
-                mar='s'
-                color='white'
-              />{' '}
-            </a>
-          </div>
+          <FollowUs />
         </div>
         <Contactform
           register={register}

@@ -27,4 +27,9 @@ $color-red: #e4130e; // primary red color
       @content;
     }
   }
+  @if $breakpoint == giant-desktop {
+    @media (min-width: 112.5em) and( max-width: 180em) {
+      @content;
+    }
+  }
 }

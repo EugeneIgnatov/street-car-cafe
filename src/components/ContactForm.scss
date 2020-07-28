@@ -14,6 +14,8 @@
     border: none;
     outline-color: $color-red;
     box-shadow: 2px 3px 5px $color-grey;
+    -webkit-appearance: none;
+    -webkit-box-shsdow: 2px 3px 5px $color-grey;
   }
 
   &-submit {
