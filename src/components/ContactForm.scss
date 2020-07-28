@@ -1,0 +1,35 @@
+@import '../base.scss';
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin-top: 4rem;
+
+  & input {
+    height: 4rem;
+    font-size: large;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    outline-color: $color-red;
+    box-shadow: 2px 3px 5px $color-grey;
+  }
+
+  &-submit {
+    height: 4rem;
+    font-size: large;
+    padding: 1rem;
+    color: $color-white;
+    margin-bottom: 2rem;
+    background-color: $color-red;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &-submit:hover {
+    background-color: $color-grey;
+  }
+}

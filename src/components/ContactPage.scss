@@ -1,0 +1,41 @@
+@import '../base';
+
+.contact_container {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.contact_address {
+  & h3 {
+    text-transform: uppercase;
+    margin: 2rem 0;
+  }
+
+  &-text {
+    line-height: 3rem;
+    color: $color-grey;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+  }
+  &-icon {
+    color: $color-red;
+    padding-right: 2px;
+  }
+
+  &-brand-icons {
+    background-color: $color-black;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+  }
+  &-brand-icons:hover {
+    background-color: $color-red;
+  }
+}

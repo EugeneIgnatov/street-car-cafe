@@ -1,5 +1,7 @@
 @import '../base.scss';
 .home {
+  margin-top: -4rem;
+
   &_cover {
     background-image: url('../images/background-home.jpg');
     background-repeat: no-repeat;

@@ -6,13 +6,24 @@ import {
   faCheckSquare,
   faCoffee,
   faCaretDown,
+  faPhone,
+  faEnvelope,
+  faMapMarker,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-library.add(fab, faCheckSquare, faCoffee, faCaretDown);
+library.add(
+  fab,
+  faCheckSquare,
+  faCoffee,
+  faCaretDown,
+  faPhone,
+  faEnvelope,
+  faMapMarker
+);
 
 ReactDOM.render(
   <React.StrictMode>

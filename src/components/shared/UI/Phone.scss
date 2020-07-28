@@ -1,0 +1,16 @@
+@import '../../../base.scss';
+
+.phone {
+  background-color: $color-white;
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-red;
+}

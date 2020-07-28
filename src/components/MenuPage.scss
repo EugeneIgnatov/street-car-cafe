@@ -84,8 +84,9 @@
     @include respond(phone) {
       grid-template-columns: 1fr;
     }
+
     &-descr {
-      color: grey;
+      color: $color-grey;
       font-size: smaller;
     }
   }

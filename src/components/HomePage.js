@@ -13,6 +13,7 @@ import SectionHeading from '../components/shared/UI/SectionHeading';
 import Button from './shared/UI/Button';
 import Mobile from './shared/Layout/Mobile';
 import Desktop from './shared/Layout/Desktop';
+import Phone from './shared/UI/Phone';
 
 const variants = {
   hidden: { opacity: 0 },
@@ -21,7 +22,7 @@ const variants = {
 
 function HomePage(props) {
   return (
-    <div>
+    <div className='home'>
       <div className='home_cover'>
         <motion.div
           className='home_image-box'
@@ -56,6 +57,7 @@ function HomePage(props) {
             </Button>
           </Desktop>
           <Mobile>
+            <Phone />
             <Button link='/menu' posit='center'>
               Full menu
             </Button>

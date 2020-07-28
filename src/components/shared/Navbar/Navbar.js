@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -12,8 +12,7 @@ import Desktop from '../Layout/Desktop';
 import Modal from '../UI/Modal';
 import './Navbar.scss';
 
-function Navbar(props) {
-  const [open, setOpen] = useState(false);
+function Navbar({ open, setOpen }) {
   return (
     <nav className='nav'>
       <NavLink to='/' exact>

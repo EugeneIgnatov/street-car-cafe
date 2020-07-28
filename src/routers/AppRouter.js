@@ -10,23 +10,37 @@ import Navbar from '../components/shared/Navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import '../App.scss';
 
-function AppRouter(props) {
+function AppRouter({
+  activeSection,
+  setActiveSection,
+  open,
+  setOpen,
+  register,
+  handleSubmit,
+  errors,
+}) {
   return (
     <div>
       <Router>
         <ScrollToTop />
-
-        <Navbar />
+        <Navbar open={open} setOpen={setOpen} />
         <main style={{ marginTop: '8rem' }}>
           <Switch>
             <Route path='/' exact>
               <HomePage />
             </Route>
             <Route path='/menu'>
-              <MenuPage />
+              <MenuPage
+                activeSection={activeSection}
+                setActiveSection={setActiveSection}
+              />
             </Route>
             <Route path='/contact'>
-              <ContactPage />
+              <ContactPage
+                register={register}
+                handleSubmit={handleSubmit}
+                errors={errors}
+              />
             </Route>
             <Route>
               <NotFoundPage />
