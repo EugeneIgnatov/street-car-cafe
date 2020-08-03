@@ -21,7 +21,7 @@ const SideBar = ({ open, setOpen }) => {
     <motion.div
       className='sidebar'
       variants={sideBarVariants}
-      initial='closed'
+      initial='open'
       exit='closed'
       animate='open'
     >

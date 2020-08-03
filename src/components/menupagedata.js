@@ -1,6 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const initialSection = {
   name: 'Breakfast',
-  id: Math.random(),
+
+  id: uuidv4(),
   items: [
     {
       name: 'The southern Breakfast',
@@ -144,155 +147,12 @@ const initialSection = {
 };
 
 const menuSections = [
-  {
-    name: 'Breakfast',
-    id: Math.random(),
-    items: [
-      {
-        name: 'The southern Breakfast',
-        price: '$ 9',
-        descreption:
-          '2 egg any style with choice of meal (ham, bacon or sausage)',
-      },
-      {
-        name: 'Cajun Sausuge Omelet',
-        price: '$ 12',
-        descreption:
-          '3 eggs omelet with beef sausage, parsley, onion, tomato, black cracked pepper and cheddar cheese',
-      },
-      {
-        name: 'Seafood Omelet',
-        price: '$ 13',
-        descreption:
-          '3 eggs omelet with shrimp, crawrish, red pepper and cheddar cheese',
-      },
-      {
-        name: 'Blueberry Pancakes',
-        price: '$ 11',
-        descreption: '',
-      },
-      {
-        name: 'Brioche French Toast',
-        price: '$ 11',
-        descreption: '',
-      },
-      {
-        name: 'Crispy Country Omelet',
-        price: '$ 12',
-        descreption:
-          '3 eggs omelet filled with crispy hash brown, ham, cheddar cheese, onion and peppers topped with gravy',
-      },
-      {
-        name: 'Egg White Omelet',
-        price: '$ 12',
-        descreption:
-          '3 egg white omelet with mushroom, spinach and feta cheese',
-      },
-      {
-        name: 'Veggle Omelet',
-        price: '$ 10',
-        descreption:
-          '3 eggs omelet with mushroom, onions, tomatoes, bell pepper, spinach & cheddar cheese',
-      },
-      {
-        name: 'Cheese Omelet',
-        price: '$ 8',
-        descreption: '3 eggs omelet',
-      },
-      {
-        name: 'Traditional Buttermilk Pancakes',
-        price: '$ 9',
-        descreption: 'American classics...',
-      },
-      {
-        name: 'Chocolate Chip Pancakes',
-        price: '$ 11',
-        descreption: 'Buttermilk pancakes filled with chocolate chips',
-      },
-      {
-        name: 'Buttermilk Waffles',
-        price: '$ 9',
-        descreption: '',
-      },
-      {
-        name: 'Biscuit & Gravy',
-        price: '$ 9',
-        descreption: 'Buttermilk biscuit topped with country gravy and sausage',
-      },
-      {
-        name: 'Traditional Benedict',
-        price: '$ 12',
-        descreption:
-          'Ham served over buttermilk biscuits, topped with two poached eggs finished with Hollandaise',
-      },
-      {
-        name: 'Crab Cake Benedict',
-        price: '$ 14',
-        descreption:
-          'Grilled crab cake served over buttermilk biscuit, topped with two poached eggs fınished with hollandaise',
-      },
-      {
-        name: 'Shrimp & Grits',
-        price: '$ 12',
-        descreption: 'BBQ shrimp over housemade grits',
-      },
-      {
-        name: 'Street Car Energy Booster',
-        price: '$ 11',
-        descreption:
-          'Start your day with our combination of Greek yogurt, honey granola and fresh fruit',
-      },
-      {
-        name: '2 eggs any style',
-        price: '$ 3',
-        descreption: '',
-      },
-      {
-        name: 'Applewood Bacon',
-        price: '$ 2.50',
-        descreption: '',
-      },
-      {
-        name: 'Turkey Bacon',
-        price: '$ 3.50',
-        descreption: '',
-      },
-      {
-        name: 'Ham',
-        price: '$ 3',
-        descreption: '',
-      },
-      {
-        name: 'Beef Sausage',
-        price: '$ 4',
-        descreption: '',
-      },
-      {
-        name: 'Toast',
-        price: '$ 2',
-        descreption: '',
-      },
-      {
-        name: 'Buttermilk Biscuit',
-        price: '$ 2',
-        descreption: '',
-      },
-      {
-        name: 'Hash Brown',
-        price: '$ 3',
-        descreption: '',
-      },
-      {
-        name: 'Grits',
-        price: '$ 3',
-        descreption: '',
-      },
-    ],
-  },
+  initialSection,
 
   {
     name: 'beignet & coffee',
-    id: Math.random(),
+
+    id: uuidv4(),
     items: [
       {
         name: 'Beignet',
@@ -323,7 +183,8 @@ const menuSections = [
   },
   {
     name: 'appetizers',
-    id: Math.random(),
+
+    id: uuidv4(),
     items: [
       {
         name: 'Cup of Gumbo',
@@ -349,7 +210,8 @@ const menuSections = [
   },
   {
     name: 'lunch & diner',
-    id: Math.random(),
+
+    id: uuidv4(),
     items: [
       {
         name: 'Fried Shrimp Po-boy',
@@ -388,7 +250,8 @@ const menuSections = [
   },
   {
     name: 'new orleans',
-    id: Math.random(),
+
+    id: uuidv4(),
     items: [
       {
         name: 'Bowl of Gumbo',
@@ -428,7 +291,7 @@ const menuSections = [
   },
   {
     name: 'drink specials',
-    id: Math.random(),
+    id: uuidv4(),
     items: [
       {
         name: 'Espresso',

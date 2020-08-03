@@ -9,6 +9,7 @@ import MenuPage from '../components/MenuPage';
 import Navbar from '../components/shared/Navbar/Navbar';
 import Footer from '../components/shared/Footer';
 import '../App.scss';
+import './AppRouter.scss';
 
 function AppRouter({
   activeSection,
@@ -24,7 +25,7 @@ function AppRouter({
       <Router>
         <ScrollToTop />
         <Navbar open={open} setOpen={setOpen} />
-        <main style={{ marginTop: '8rem' }}>
+        <main className='main'>
           <Switch>
             <Route path='/' exact>
               <HomePage />

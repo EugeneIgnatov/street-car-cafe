@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 
 import { menuSections } from '../components/menupagedata';
 import './MenuPage.scss';
@@ -11,6 +11,21 @@ import Desktop from '../components/shared/Layout/Desktop';
 import Phone from '../components/shared/UI/Phone';
 
 function MenuPage({ activeSection, setActiveSection }) {
+  //variants, framermotion for menu item
+  const sectionVariants = {
+    open: { opacity: 1 },
+    closed: { opacity: 0 },
+  };
+
+  // toggle class for underline active menu section
+  const toggleClass = (id) => {
+    if (id === activeSection.id) {
+      return 'menu_sections-line';
+    } else {
+      return '';
+    }
+  };
+
   return (
     <div className='menu'>
       <SectionHeading
@@ -28,7 +43,7 @@ function MenuPage({ activeSection, setActiveSection }) {
               }}
             >
               <h3>{item.name}</h3>
-              <span className='menu_sections-line'></span>
+              <span className={toggleClass(item.id)}></span>
             </div>
           ))}
         </div>
@@ -58,11 +73,17 @@ function MenuPage({ activeSection, setActiveSection }) {
 
       <div className='menu_items-container'>
         {activeSection.items.map((item) => (
-          <div key={item.name}>
+          <motion.div
+            key={item.name}
+            animate='open'
+            initial='closed'
+            exit='closed'
+            variants={sectionVariants}
+          >
             <h3>{item.name}</h3>
             <p>{item.price}</p>
             <p className='menu_items-container-descr'>{item.descreption}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
