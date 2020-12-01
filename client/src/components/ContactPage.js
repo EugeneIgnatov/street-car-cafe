@@ -7,8 +7,12 @@ import Contactform from './ContactForm';
 import Mobile from '../components/shared/Layout/Mobile';
 import Phone from '../components/shared/UI/Phone';
 import FollowUs from '../components/FollowUs';
+import MyMap from './Map/MyMap';
 
 function ContactPage({ register, handleSubmit, errors }) {
+  // for Map component
+  const API_KEY = process.env.REACT_APP_NOT_GOOGLE_MAP_API;
+
   return (
     <div>
       <Mobile>
@@ -70,6 +74,7 @@ function ContactPage({ register, handleSubmit, errors }) {
           errors={errors}
         ></Contactform>
       </div>
+      <MyMap apiKey={API_KEY} lat='29.951152' lng='-90.070007'></MyMap>
     </div>
   );
 }
