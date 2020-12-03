@@ -117,7 +117,6 @@ const getMenuItem = (req, res, next) => {
   });
 
   const menuItem = menuSection.items.find((item) => {
-    console.log(item);
     return item.id.toString() === itemId.toString();
   });
 
