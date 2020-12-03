@@ -8,4 +8,7 @@ router.get('/', menuControllers.getMenu);
 router.get('/:sectionId', menuControllers.getMenuSection);
 
 router.get('/:sectionId/:itemId', menuControllers.getMenuItem);
+
+router.post('/', menuControllers.createMenuItem);
+
 module.exports = router;
