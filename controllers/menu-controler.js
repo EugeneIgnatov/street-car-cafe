@@ -1,6 +1,6 @@
 const HttpError = require('../models/http-error');
 
-const MENU_SECTIONS = [
+let MENU_SECTIONS = [
   {
     section_name: 'beignet & coffee',
     id: 1,
@@ -126,6 +126,26 @@ const getMenuItem = (req, res, next) => {
   res.json({ menuItem });
 };
 
+const createMenuItem = (req, res, next) => {
+  const { menuSectionId, name, price, descreption } = req.body;
+  const createdNewItem = {
+    name,
+    price,
+    descreption,
+  };
+  const menuSection = MENU_SECTIONS.find((section) => {
+    return section.id.toString() === menuSectionId.toString();
+  });
+  menuSection.items.push(createdNewItem);
+
+  MENU_SECTIONS = [...MENU_SECTIONS, menuSection];
+
+  // const createdMenuItem = menuSection.items.push(createdNewItem);
+  // MENU_SECTIONS
+  res.status(201).json(createdNewItem);
+};
+
 exports.getMenu = getMenu;
 exports.getMenuSection = getMenuSection;
 exports.getMenuItem = getMenuItem;
+exports.createMenuItem = createMenuItem;

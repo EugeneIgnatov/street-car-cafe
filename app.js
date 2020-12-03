@@ -6,6 +6,8 @@ const port = 9000;
 const adminEditRouts = require('./routes/admin-edit');
 const menuItems = require('./routes/menu');
 
+app.use(bodyParser.json());
+
 app.use('/admin', adminEditRouts);
 app.use('/menu', menuItems);
 
