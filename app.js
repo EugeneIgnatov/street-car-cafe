@@ -8,8 +8,6 @@ var favicon = require('serve-favicon');
 // const adminEditRouts = require('./routes/admin-edit');
 // const menuItems = require('./routes/menu');
 
-// app.use(bodyParser.json());
-
 // app.use('/admin', adminEditRouts);
 // app.use('/menu', menuItems);
 // app.use('/', (req, res) => {
