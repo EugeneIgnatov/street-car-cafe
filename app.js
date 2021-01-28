@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 9000;
+var favicon = require('serve-favicon');
 
 // const adminEditRouts = require('./routes/admin-edit');
 // const menuItems = require('./routes/menu');
@@ -14,6 +15,9 @@ const port = process.env.PORT || 9000;
 // app.use('/', (req, res) => {
 //   res.send('hello');
 // });
+app.use(
+  favicon(path.join(__dirname, '..', 'client', 'public', 'Streetcar-logo.jpg'))
+);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 // Handle React routing, return all requests to React app
