@@ -15,9 +15,9 @@ var favicon = require('serve-favicon');
 // app.use('/', (req, res) => {
 //   res.send('hello');
 // });
-app.use(
-  favicon(path.join(__dirname, '..', 'client', 'public', 'Streetcar-logo.jpg'))
-);
+// app.use(
+//   favicon(path.join(__dirname, '..', 'client', 'public', 'Streetcar-logo.jpg'))
+// );
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 // Handle React routing, return all requests to React app
