@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 9000;
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 
 // const adminEditRouts = require('./routes/admin-edit');
 // const menuItems = require('./routes/menu');
