@@ -49,7 +49,10 @@ const ContactForm = ({ register, handleSubmit, errors }) => {
         <p>This is required</p>
       )}
 
-      <button type='submit' className='contact_form-submit'>
+      <button
+        type='submit'
+        className='contact_form-submit'
+        href='mailto:yelow@bk.ru'>
         Send Message
       </button>
     </form>
